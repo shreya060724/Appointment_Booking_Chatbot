@@ -1,0 +1,247 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#chatbot-toggle {
+  background-color: #89b6df;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 22px;
+}
+
+#chatbot-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#chatbox {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 350px;
+  height: 600px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  #chatbox {
+    width: 90%;
+    height: 90vh;
+    bottom: 70px;
+    right: 5%;
+    left: 5%;
+  }
+}
+
+#chatbox-header {
+  background-color: #89b6df;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+  height: 50px;
+
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-content h3{
+  font-size: 22px;
+}
+
+.chatbot-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.chatbot-avatar i {
+  font-size: 22px;
+  color: #89b6df;
+}
+
+#close-chat {
+  background: transparent;
+  border: none;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+#close-chat:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+#close-chat i {
+  font-size: 25px;
+}
+
+#chatbox-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 15px;
+}
+
+#chat-output {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#chat-output::-webkit-scrollbar {
+  width: 10px;
+  height: 90px;
+}
+
+#chat-output::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+#chat-output::-webkit-scrollbar-thumb {
+  background: #89b6df;
+  border-radius: 10px;
+}
+
+.message {
+  margin: 8px 0;
+  padding: 10px 15px;
+  border-radius: 15px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.bot-message {
+  background-color: #dddde1;
+  margin-right: auto;
+  border-bottom-left-radius: 5px;
+  align-self: flex-start;
+}
+
+.user-message {
+  background-color: #a6cbed;
+  margin-left: auto;
+  border-bottom-right-radius: 5px;
+  align-self: flex-end;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #ddd;
+}
+
+#chat-input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+#chat-input:hover {
+  border-color: #e1e1e1;
+}
+
+#chat-input:focus {
+  border-color: #89b6df;
+  box-shadow: 0 0 5px rgba(137, 182, 223, 0.3);
+}
+
+#send-btn {
+  background-color: #89b6df;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+#send-btn:hover {
+  background-color: #6da1d1;
+  transform: scale(1.1);
+}
+
+#send-btn:active {
+  transform: scale(0.95);
+}
+
+.hidden {
+  display: none !important;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+button:focus {
+  outline: none;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking Chatbot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="chatbot-container">
+        <button id="chatbot-toggle">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div id="chatbox" class="hidden">
+            <div id="chatbox-header">
+                <div class="header-content">
+                    <div class="chatbot-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Real Estate Chatbot</h3>
+                </div>
+                <button id="close-chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="chatbox-body">
+                <div id="chat-output"></div>
+                <div class="input-container">
+                    <input type="text" id="chat-input" placeholder="Type your message..." />
+                    <button id="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
