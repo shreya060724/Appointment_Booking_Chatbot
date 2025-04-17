@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatOutput = document.getElementById("chat-output");
     const chatInput = document.getElementById("chat-input");
     const sendBtn = document.getElementById("send-btn");
+    const openChatBtn = document.getElementById("open-chat-btn");
+    const secondChatBtn = document.getElementById("second-chat-btn");
 
     let step = 0;
     let userData = {
@@ -19,7 +21,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Chatbot toggle functionality
     toggleButton.addEventListener("click", () => {
-        chatbox.classList.toggle("hidden");
+        openChatbox();
+    });
+
+    // Additional buttons to open chatbot
+    if (openChatBtn) {
+        openChatBtn.addEventListener("click", () => {
+            openChatbox();
+        });
+    }
+
+    if (secondChatBtn) {
+        secondChatBtn.addEventListener("click", () => {
+            openChatbox();
+        });
+    }
+
+    function openChatbox() {
+        chatbox.classList.remove("hidden");
         toggleButton.classList.remove("pulse");
         if (!chatbox.classList.contains("hidden")) {
             chatInput.focus();
@@ -27,15 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 nextStep(""); // Start the conversation when chat opens
             }
         }
-    });
+    }
 
     closeButton.addEventListener("click", () => {
         chatbox.classList.add("hidden");
         toggleButton.classList.add("pulse");
     });
     
-    
-
     function displayMessage(message, isUser = false) {
         const messageDiv = document.createElement("div");
         messageDiv.textContent = message;
@@ -253,4 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
             sendBtn.click();
         }
     });
+
+    // Make the chatbot pulse initially to draw attention
+    toggleButton.classList.add("pulse");
 });
