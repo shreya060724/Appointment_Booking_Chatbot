@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const { google } = require("googleapis");
 
 const app = express();
-const PORT = 4000;
+const PORT = 5500;
 
 // Middleware
 app.use(bodyParser.json());
@@ -11,14 +11,14 @@ app.use(express.static("public"));
 
 // Google Sheets setup
 const auth = new google.auth.GoogleAuth({
-    keyFile: "./credentials/credentials.json",
+    keyFile: "./credentials/credentials.json", // Path to your credentials file
     scopes: ["https://www.googleapis.com/auth/spreadsheets"],
 });
 
 const sheets = google.sheets({ version: "v4", auth });
 
 // Replace with your Google Sheet ID
-const SPREADSHEET_ID = "1zPfN7VVtj6uuviq-gHVD4flNGtyFD1rJr9e7bvRKEos";
+const SPREADSHEET_ID = "1fozmqGPk-DbDlJipZWbLSpYXaXABUSaRb3_z8GZoYEE";
 
 // Default time slots
 const defaultSlots = ["10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00" ];
@@ -31,7 +31,7 @@ async function loadBookedSlots() {
     try {
         const response = await sheets.spreadsheets.values.get({
             spreadsheetId: SPREADSHEET_ID,
-            range: "Sheet1!D:E",
+            range: "Sheet1!D:E", // Assuming booking data is in columns D and E (Date, Time)
         });
 
         const rows = response.data.values || [];
