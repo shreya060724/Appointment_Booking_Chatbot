@@ -1,7 +1,212 @@
+/* Base styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  color: #333;
+  background-color: #f5f7fa;
+}
+
+/* Header styling */
+header {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo i {
+  font-size: 28px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+#hero {
+  background: linear-gradient(rgba(84, 114, 197, 0.8), rgba(30, 58, 138, 0.9)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #0e497f;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  background-color: #6da1d1;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  border: 2px solid #89b6df;
+  color: #1e3a8a;
+}
+
+.cta-button.secondary:hover {
+  background-color: #89b6df;
+  color: white;
+}
+
+/* Features section */
+#features {
+  padding: 80px 20px;
+  background-color: white;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.feature-card {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card i {
+  font-size: 40px;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #1e3a8a;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* About section */
+#about {
+  padding: 80px 20px;
+  background-color: #eceef1;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-image img {
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-content h2 {
+  font-size: 36px;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  nav ul {
+    gap: 15px;
+  }
+  
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .hero-content h1 {
+    font-size: 36px;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+  }
 }
 
 #chatbot-container {
@@ -12,7 +217,7 @@ body {
 }
 
 #chatbot-toggle {
-  background-color: #89b6df;
+  background-color: #1e3a8a;
   color: white;
   border: none;
   border-radius: 50%;
@@ -20,7 +225,7 @@ body {
   height: 60px;
   cursor: pointer;
   outline: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +235,7 @@ body {
 
 #chatbot-toggle:hover {
   transform: scale(1.1);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
 #chatbox {
@@ -38,36 +243,36 @@ body {
   bottom: 90px;
   right: 20px;
   width: 350px;
-  height: 600px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  height: 550px;
+  border: none;
+  border-radius: 15px;
   background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 @media (max-width: 480px) {
   #chatbox {
     width: 90%;
-    height: 90vh;
-    bottom: 70px;
+    height: 70vh;
+    bottom: 80px;
     right: 5%;
     left: 5%;
   }
 }
 
 #chatbox-header {
-  background-color: #89b6df;
+  background-color: #1e3a8a;
   color: white;
   padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 10px 10px 0 0;
-  height: 50px;
-
+  border-radius: 15px 15px 0 0;
+  height: 60px;
 }
 
 .header-content {
@@ -76,24 +281,26 @@ body {
   gap: 10px;
 }
 
-.header-content h3{
-  font-size: 22px;
+.header-content h3 {
+  font-size: 20px;
+  margin: 0;
 }
 
 .chatbot-avatar {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .chatbot-avatar i {
-  font-size: 22px;
-  color: #89b6df;
+  font-size: 20px;
+  color: #1e3a8a;
 }
 
 #close-chat {
@@ -116,7 +323,7 @@ body {
 }
 
 #close-chat i {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 #chatbox-body {
@@ -137,8 +344,8 @@ body {
 }
 
 #chat-output::-webkit-scrollbar {
-  width: 10px;
-  height: 90px;
+  width: 6px;
+  height: 10px;
 }
 
 #chat-output::-webkit-scrollbar-track {
@@ -148,26 +355,31 @@ body {
 
 #chat-output::-webkit-scrollbar-thumb {
   background: #89b6df;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .message {
   margin: 8px 0;
-  padding: 10px 15px;
-  border-radius: 15px;
-  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  max-width: 80%;
   word-wrap: break-word;
+  font-size: 14px;
+  line-height: 1.4;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .bot-message {
-  background-color: #dddde1;
+  background-color: #c0cad6;
+  color: #333;
   margin-right: auto;
   border-bottom-left-radius: 5px;
   align-self: flex-start;
 }
 
 .user-message {
-  background-color: #a6cbed;
+  background-color: #1e3a8a;
+  color: white;
   margin-left: auto;
   border-bottom-right-radius: 5px;
   align-self: flex-end;
@@ -179,21 +391,22 @@ body {
   align-items: center;
   padding: 15px;
   background-color: #f8f9fa;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #eee;
+  border-radius: 0 0 15px 15px;
 }
 
 #chat-input {
   flex: 1;
-  padding: 12px;
+  padding: 12px 15px;
   border: 1px solid #ddd;
   border-radius: 20px;
   outline: none;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
+  font-size: 14px;
 }
 
 #chat-input:hover {
-  border-color: #e1e1e1;
+  border-color: #ccc;
 }
 
 #chat-input:focus {
@@ -202,7 +415,7 @@ body {
 }
 
 #send-btn {
-  background-color: #89b6df;
+  background-color: #1e3a8a;
   color: white;
   border: none;
   border-radius: 50%;
@@ -217,7 +430,7 @@ body {
 }
 
 #send-btn:hover {
-  background-color: #6da1d1;
+  background-color: #2d4c9e;
   transform: scale(1.1);
 }
 
@@ -232,9 +445,11 @@ body {
 @keyframes pulse {
   0%, 100% {
     transform: scale(1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
   }
 }
 
@@ -242,6 +457,22 @@ body {
   animation: pulse 2s infinite;
 }
 
-button:focus {
-  outline: none;
+/* Additional elements for form inputs */
+.date-picker {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 10px 0;
+  font-family: Arial, sans-serif;
+}
+
+.time-dropdown {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 10px 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
 }
