@@ -3,13 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Appointment Booking Chatbot</title>
+    <title>Shiro Real Estate Bot - Book Your Visit</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-building"></i>
+                <h1>Shiro Real Estate</h1>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Easy Appointement Booking</h1>
+            <p>Schedule a visit with our expert agents to explore exclusive properties</p>
+            <button class="cta-button" id="open-chat-btn">Click on bot</button>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="features-container">
+            <div class="feature-card">
+                <i class="fas fa-calendar-check"></i>
+                <h3>Easy Scheduling</h3>
+                <p>Book appointments at your convenience with our online system</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-comments"></i>
+                <h3>Instant Confirmation</h3>
+                <p>Receive booking confirmations directly on WhatsApp</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Prime Locations</h3>
+                <p>Explore properties in the most sought-after neighborhoods</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="image/bot.png" alt="Real Estate Office">
+            </div>
+            <div class="about-content">
+                <h2>About Shiro Real Estate</h2>
+                <p>Shiro Real Estate is dedicated to helping you find the perfect property that meets all your requirements. Our team of experienced agents is committed to providing personalized service and expert guidance throughout your real estate journey.</p>
+                <p>With our innovative booking system, you can easily schedule property viewings at your convenience. Our agents will be ready to show you around and answer all your questions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot (Existing Code) -->
     <div id="chatbot-container">
-        <button id="chatbot-toggle">
+        <button id="chatbot-toggle" class="pulse">
             <i class="fas fa-comments"></i>
         </button>
         <div id="chatbox" class="hidden">
@@ -18,7 +69,7 @@
                     <div class="chatbot-avatar">
                         <i class="fas fa-robot"></i>
                     </div>
-                    <h3>Real Estate Chatbot</h3>
+                    <h3>Shiro Assistant</h3>
                 </div>
                 <button id="close-chat">
                     <i class="fas fa-times"></i>
