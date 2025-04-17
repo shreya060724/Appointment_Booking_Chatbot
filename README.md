@@ -50,7 +50,7 @@ This will start the server and the chatbot will be available for interactions. I
 ### 6. Access the Chatbot 🌐
 Once the server is running, you can interact with the bot through the designated interface (e.g., web interface or integration platform).
 
-![image](https://github.com/user-attachments/assets/aa1b52a2-53a1-41d3-b739-a793a56c3a0a)
+![image](https://github.com/user-attachments/assets/df458a60-b9b2-46ad-801a-e8de94e8ca31)
 ![image](https://github.com/user-attachments/assets/cb962a3f-2c16-4c5b-b53f-12bc59f8238e)
 
 
@@ -62,10 +62,3 @@ After the booking form is submitted, users will be provided with a **WhatsApp li
 
 If you would like to contribute to this project, feel free to fork the repository, create a branch, and submit a pull request with your improvements or fixes.
 
-## **License 📜**
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
----
-
-This version is now enhanced with emojis to make it more visually engaging and easier to follow.
